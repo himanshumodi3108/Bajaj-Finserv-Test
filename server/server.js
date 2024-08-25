@@ -21,7 +21,7 @@ app.get("/", (req, res) => {
   res.send("Root route is working!");
 });
 
-app.get("/bfhl", (req, res) => {
+app.get("/get", (req, res) => {
   res.status(200).json({ operation_code: "1" });
 });
 
