@@ -1,11 +1,11 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+const cors = require("cors");
 
 const app = express();
 const port = process.env.PORT || 5000;
 
-// Middleware to parse JSON requests
-app.use(bodyParser.json());
+app.use(cors());
 
 const USER_INFO = {
   fullName: "Himanshu Kumar Modi",
@@ -21,7 +21,7 @@ app.get("/", (req, res) => {
   res.send("Root route is working!");
 });
 
-app.get("/bfhlg", (req, res) => {
+app.get("/bfhl", (req, res) => {
   res.status(200).json({ operation_code: "1" });
 });
 
