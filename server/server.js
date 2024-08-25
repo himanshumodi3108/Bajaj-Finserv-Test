@@ -8,11 +8,11 @@ const port = process.env.PORT || 5000;
 app.use(bodyParser.json());
 
 const USER_INFO = {
-  fullName: "john_doe",
-  dob: "17091999",
+  fullName: "Himanshu Kumar Modi",
+  dob: "31082003",
   email: "himanshukumar.modi2021@gmail.com",
   roll_number: "21BCI0011",
-  userId: `${fullName}_${dob}`,
+  userId: "himanshumodi_31082003",
 };
 
 app.use(bodyParser.json());
@@ -21,7 +21,7 @@ app.get("/", (req, res) => {
   res.send("Root route is working!");
 });
 
-app.get("/bfhl", (req, res) => {
+app.get("/bfhlg", (req, res) => {
   res.status(200).json({ operation_code: "1" });
 });
 
@@ -50,6 +50,6 @@ app.post("/bfhl", (req, res) => {
   res.status(200).json(response);
 });
 
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
 });
